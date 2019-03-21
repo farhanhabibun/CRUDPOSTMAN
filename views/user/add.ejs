@@ -1,0 +1,38 @@
+<%- include ../layouts/header.ejs %>
+<% if (messages.error) { %>
+    <p style= "color : red"> <%- messages.error %> </p>
+<% } %>
+
+<% if (messages.succes) { %>
+    <p style= "color : green"> <%- messages.success %> </p>
+<% } %>
+
+<form action="/users/add" method ="post" name="form1">
+    <table width ="25%" border="0">
+        <tr>
+            <td>Nama</td>
+            <td><input type="text" name="nama" id="nama" value="<%= nama %>"></td>
+        </tr>
+
+        <tr>
+            <td>Jurusan</td>
+            <td><input type="text" name="jurusan" value="<%= jurusan %>"></td>
+        </tr>
+
+        <tr>
+             <td>Email</td>
+             <td><input type="text" name="email" value="<%= email %>"></td>
+        </tr>
+
+        <tr>
+            <td>No Telephone</td>
+             <td><input type="text" name="no" value="<%= no %>"></td>
+        </tr>
+
+        <tr>
+                <td></td>
+                <td><input type="submit" name="submit" value="add"></td>
+            </tr>
+
+    </table>
+</form>
